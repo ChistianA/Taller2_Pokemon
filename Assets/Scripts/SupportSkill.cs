@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SupportSkill : MonoBehaviour
+public class SupportSkill : Skill
 {
-    int power;
-    new string name;
 
     public SupportSkill(string name)
     {

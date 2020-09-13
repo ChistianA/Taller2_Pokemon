@@ -18,10 +18,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1 = new Player(playerName);
+        /*player1 = new Player(playerName);
         moveset = new AttackSkill("Impactrueno",10,1);
         critter = new Critter(nameCritter1,affinity,baseAttack,baseDefense,baseSpeed,hp, moveset);
-        List<Critter> critters = new List<Critter>(){critter};
+        List<Critter> critters = new List<Critter>(){critter};*/
     }
 
     // Update is called once per frame

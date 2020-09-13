@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackSkill : Skill
 {
+
     float[,] affinityMatrix = { { 0.5f, 2, 1, 1, 1, 1 }, { 2, 0.5f, 1, 1, 1, 1 }, { 1, 1, 0.5f, 2, 1, 0 }, { 1, 1, 0.5f, 0.5f, 2, 1 }, { 1, 1, 1, 0.5f, 0.5f, 0.5f }, { 1, 1, 1, 1, 2, 0.5f } };
 
     public AttackSkill(string name, int power, int affinity)
@@ -21,9 +22,9 @@ public class AttackSkill : Skill
 
     public float[,] AffinityMatrix { get => affinityMatrix; set => affinityMatrix = value; }
 
-    public float Attack(Critter player, Critter enemy, float power)
+    public void Attack(Critter player, Critter enemy, float power)
     {
         float damageValue = (player.getBaseAttack() + power) * MatrixAffinity(player, enemy);
-        return damageValue;
+        enemy.setHp(enemy.getHp() - damageValue);
     }
 }

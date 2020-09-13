@@ -5,19 +5,19 @@ using UnityEngine;
 public class Critter : MonoBehaviour
 {
     //Attributes
-    string critterName;
-    int affinity;
-    float baseAttack;
-    float baseDefense;
-    float baseSpeed;
-    float hp;
-    Skill moveSet;
+    [SerializeField] string critterName;
+    [SerializeField] int affinity;
+    [SerializeField] float baseAttack;
+    [SerializeField] float baseDefense;
+    [SerializeField] float baseSpeed;
+    [SerializeField] float hp;
+
     string[] nameAffinity = { "Dark", "Light", "Fire", "Water", "Wind", "Earth"};
 
     
 
     //Builder
-    public Critter(string name, int  affinity, float baseAttack, float baseDefense, float baseSpeed, float hp, Skill moveSet)
+    /*public Critter(string name, int  affinity, float baseAttack, float baseDefense, float baseSpeed, float hp, Skill moveSet)
     {
         name = critterName;
         this.affinity = affinity;
@@ -26,7 +26,7 @@ public class Critter : MonoBehaviour
         this.baseSpeed = baseSpeed;
         this.hp = hp;
         this.moveSet = moveSet;
-    }
+    }*/
     //Ver como solucionar que solo se puedan tener entre 1 y 3 instancias de Skill
     
     public string getName()
