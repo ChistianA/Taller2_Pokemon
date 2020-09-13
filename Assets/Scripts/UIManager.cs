@@ -8,6 +8,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject attack_defenseButton;
     [SerializeField] GameObject attackSkills;
     [SerializeField] GameObject supportSkills;
+    [SerializeField] GameObject interfacce;
+
+
+    private void Start() {
+        
+    }
 
     public void SetAttackSkills(){
         attack_defenseButton.SetActive(false);
@@ -17,6 +23,14 @@ public class UIManager : MonoBehaviour
     public void SetSupportSkills(){
         attack_defenseButton.SetActive(false);
         supportSkills.SetActive(true);
+    }
+
+    public void Disable_Interface()
+    {
+        interfacce.SetActive(false);
+    }
+    public void Enable_Enterface(){
+        interfacce.SetActive(true);
     }
 
 }
