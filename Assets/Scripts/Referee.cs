@@ -38,14 +38,7 @@ public class Referee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(attackBool == true){
-            uiManager.Disable_Interface();
-            EnemyAttack(1);
-            
-        }
-        else{
-            uiManager.Enable_Enterface();
-        }
+
     }
 
     public void Attack(string attackSkillName){
@@ -53,16 +46,19 @@ public class Referee : MonoBehaviour
             attackSkill.Attack(critter1,critter2,attackSkill.getPower());
             hpText1.text = critter2.getHp().ToString() + " HP";
             attackBool = true;
+            EnemyAttack(1);
         }
         else if(attackSkillName == "Smash"){
             attackSkill2.Attack(critter1,critter2,attackSkill2.getPower());
             hpText1.text = critter2.getHp().ToString() + " HP";
             attackBool = true;
+            EnemyAttack(1);
         }
         else if(attackSkillName == "Special"){
             attackSkill3.Attack(critter1,critter2,attackSkill3.getPower());
             hpText1.text = critter2.getHp().ToString() + " HP";
             attackBool = true;
+            EnemyAttack(1);
         }
     }
     public void EnemyAttack(int numAttack){

@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject attack_defenseButton;
     [SerializeField] GameObject attackSkills;
     [SerializeField] GameObject supportSkills;
-    [SerializeField] GameObject interfacce;
+    public GameObject interfacce;
+
 
 
     private void Start() {
